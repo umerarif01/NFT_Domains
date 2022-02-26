@@ -11,10 +11,10 @@ export default function Home() {
         <title>NETRO NAME SERVICE</title>
         <meta name="description" content="Create your own domains" />
       </Head>
-      <Header />
+      <Header key={""} />
       <div className="py-[100px]" />
-      <Main />
-      <Footer />
+      <Main key={""} />
+      <Footer key={""} />
     </div>
   );
 }

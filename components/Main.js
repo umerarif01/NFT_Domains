@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import contractAbi from "../utils/contractABI.json";
+import Image from "next/image";
 
 const Main = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -215,8 +216,8 @@ const Main = () => {
           <div className="grid grid-cols-2 gap-4 2xl:grid-cols-3">
             {mints.map((mint, index) => {
               return (
-                <div className="bg-red-500 p-5 rounded-md" key={index}>
-                  <div className="flex">
+                <div className=" bg-red-500 p-5 rounded-md" key={index}>
+                  <div className="flex space-x-2">
                     <a
                       className="link"
                       href={`https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}`}
@@ -236,8 +237,10 @@ const Main = () => {
                         className="edit-button"
                         onClick={() => editRecord(mint.name)}
                       >
-                        <img
-                          className="pl-2 h-[20px]"
+                        <Image
+                          width={20}
+                          height={15}
+                          className=""
                           src="https://img.icons8.com/metro/26/000000/pencil.png"
                           alt="Edit button"
                         />
