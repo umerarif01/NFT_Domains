@@ -208,15 +208,15 @@ const Main = () => {
   const renderMints = () => {
     if (currentAccount && mints.length > 0) {
       return (
-        <div className="mint-container">
+        <div className="">
           <p className="text-center text-2xl py-4 font-semibold">
             {" "}
             Recently minted domains!
           </p>
           <div className="grid grid-cols-2 gap-4 2xl:grid-cols-3">
-            {mints.map((mint, index) => {
+            {mints.map((mint) => {
               return (
-                <div className=" bg-red-500 p-5 rounded-md" key={index}>
+                <div className=" bg-red-500 p-5 rounded-md" key={mint.id}>
                   <div className="flex space-x-2">
                     <a
                       className="link"
